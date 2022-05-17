@@ -1,5 +1,8 @@
 #include <iostream>
+#include "gameWindow.h"
+
 
 int main() {
-	std::cout<<"Hello, world!"<<std::endl;
+	GameWindow *game = new GameWindow(600,600);
+	game->SetWindow();
 }
