@@ -3,17 +3,31 @@
  ***/
  
 // include statements
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
+
+
+#include "player.h"
+
 
 class GameWindow {
 	public:
-		GameWindow(int, int);
+
+		GameWindow(int, int, Player *player);
+
 		~GameWindow();
-		int SetWindow();
+
+		void handleKeyPress();
+
+		int display();
+
+		void drawObjects();
 
 
 	private:
 		int width;
 		int length;
 		GLFWwindow * window;
+		Player *player;
+
 };

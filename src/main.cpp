@@ -1,8 +1,11 @@
 #include <iostream>
 #include "gameWindow.h"
 
+#pragma once
 
 int main() {
-	GameWindow *game = new GameWindow(600,600);
-	game->SetWindow();
+	Player* player1 = new Player(300, 300);
+	GameWindow *game = new GameWindow(600,600, player1);
+	
+		
 }
